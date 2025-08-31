@@ -59,7 +59,7 @@ def search_prompt(question=None):
         contexto=store.similarity_search(question, k=10), pergunta=question
     )
 
-    model = ChatOpenAI(model="gpt-5-mini", temperature=0.5)
+    model = ChatOpenAI(model="gpt-5-mini", temperature=0)
     result = model.invoke(messages)
 
     return result
